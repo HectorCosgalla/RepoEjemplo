@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "conio.h"
 #include "math.h"
-int main(int argc, char const *argv[]) {
+int main() {
   int Comp, Num, Cont, Narc, Div, Des, Des2;
 	Comp = 0;
 	Num = 0;
