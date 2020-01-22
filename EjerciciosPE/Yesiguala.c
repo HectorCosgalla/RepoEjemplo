@@ -16,7 +16,6 @@ int main() {
     Pot = Pot * x;
     Fact= Fact * i;
     y = y + (Pot / Fact);
-    printf("(Pot) = %f (Fact) = %f (y) = %f \n", Pot, Fact, y);
   }
   printf("y = %f\n", y);
 
