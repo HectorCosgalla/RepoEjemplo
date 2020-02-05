@@ -1,6 +1,6 @@
 #include "stdio.h"
 /****************************************************************
-* Autor: Hector Cosgalla                                        *
+* Autor: Hector A. V. Cosgalla                                        *
 * Entradas: un numero "n"                                       *
 * Salidas: Una piramide con los numeros del 1 hasta n           *
 * Procedimiento: Se lee el numero n y posteriormente se van     *
