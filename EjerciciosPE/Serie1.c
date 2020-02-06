@@ -37,7 +37,6 @@ void entradas(float *n, float *x) {
 
 void ex(float *n, float *resul, float x) {
   float pot, fact;
-
   pot = 1;
   fact = 1;
   for (int i = 1; i <= *n; i++) {
