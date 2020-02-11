@@ -1,8 +1,9 @@
 #include "stdio.h"
+#include "stdbool.h"
 
 /********** PROTOTIPO DE FUNCIONES **********/
 void Entradas(int *);
-void Proceso(int *, int *, int *, bool *);
+void Proceso(int *, int *, bool *);
 void Salida(bool);
 
 int main() {
@@ -15,7 +16,7 @@ int main() {
 
   Entradas(&n);
   /********** PROCESOS **********/
-  Proceso(&n, &uno, &otro, &repunit)
+  Proceso(&n, &uno, &repunit);
 
   /********** SALIDAS **********/
   Salida(repunit);
@@ -33,18 +34,18 @@ void Proceso(int *n, int *uno, bool *repunit) {
   nums = 0;
   final = *n;
   do {
-    final = final / 10
+    final = final / 10;
     nums++;
-  } while (final > 0)
+  } while (final > 0);
 
   do {
-    final = *n / 10:
+    final = *n % 10;
     *n = *n / 10;
     if (final == 1) {
       *uno = *uno + 1;
     }
-  } while(n > 0);
-  if (nums == *uno) {
+  } while(*n != 0);
+  if (*uno == nums) {
     *repunit = true;
   }
 }
