@@ -120,13 +120,11 @@ void emenx(float *n, float *resul, float x) {
   pot = 1;
   fact = 1;
   for (int i = 1; i <= *n; i++) {
+    pot = pot * x * x;
+    fact = fact * i;
     if (i % 2 == 0) {
-      pot = pot * x * x;
-      fact = fact * i;
       *resul = *resul + (pot / fact);
     } else {
-      pot = pot * x * x;
-      fact = fact * i;
       *resul = *resul - (pot / fact);
     }
   }

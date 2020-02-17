@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /*************** DECLARACION DE FUNCIONES ***************/
-void entradas(float *n, float *x);
-void ex(float *n, float *resul, float x);
-void potencia(float *pot, float *x);
-void factorial(float *fact, int *i);
-void salida(float, float);
+void entradas(float *, int *);
+void ex(float , float *, int );
+void potencia(float *, int );
+void factorial(float *, int );
 
 int main() {
   /*************** DECLARACION DE VARIABLES ***************/
-  float n, x, resul;
+  float n, resul;
+  int x;
   x = 0;
   n = 0;
   resul = 1;
@@ -18,44 +18,39 @@ int main() {
   entradas(&n, &x);
 
   /*************** PROCESOS ***************/
-  ex(&n, &resul, x);
+  ex(n, &resul, x);
 
   /*************** SALIDA ***************/
-  salida(resul, x);
+  printf("El resultado de e^%d = %f \n", x, resul );
 
   return 0;
 }
 
 /*************** FUNCIONES ***************/
-void entradas(float *n, float *x) {
+void entradas(float *n, int *x) {
   printf("ingrese un numero x:\n");
-  scanf("%f", x);
+  scanf("%d", x);
   printf("ingrese el limite de la serie (n):\n");
   scanf("%f", n);
   return;
 }
 
-void ex(float *n, float *resul, float x) {
+void ex(float n, float *resul, int x) {
   float pot, fact;
   pot = 1;
   fact = 1;
-  for (int i = 1; i <= *n; i++) {
-    potencia(&pot, &x);
-    factorial(&fact, &i);
+  for (int i = 1; i <= n; i++) {
+    potencia(&pot, x);
+    factorial(&fact, i);
     *resul = *resul + pot/fact;
   }
   return;
 }
 
-void salida(float resul, float x) {
-  printf("El resultado de e^%1.0f = %f \n", x, resul );
+void potencia(float *pot, int x) {
+  *pot = *pot * x ;
 }
 
-void potencia(float *pot, float *x) {
-  *pot = *pot * *x;
-  return;
-}
-
-void factorial(float *fact, int *i) {
-  *fact = *i * *fact;
+void factorial(float *fact, int i) {
+  *fact = i * *fact;
 }
