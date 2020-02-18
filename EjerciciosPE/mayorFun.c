@@ -25,11 +25,13 @@ void mayor(int *x, int *y, int *z) {
   int val;
   val = 0;
 
-  if (*x < *z) {
-    if (*x < *y) {
+  if (*x > *z) {
+    if (*x > *y) {
       val = *x;
       *x = *y;
       *y = val;
+    } else {
+
     }
   } else {
     if (*x < *y) {
