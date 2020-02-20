@@ -22,24 +22,18 @@ printf("%d  ||  %d  ||  %d\n", x, y, z);
 
 /********** FUNCIONES **********/
 void mayor(int *x, int *y, int *z) {
-  int val;
-  val = 0;
-
-  if (*x > *z) {
-    if (*x > *y) {
-      val = *x;
+  int var;
+  var = 0;
+  while (*x < *y || *x < *z || *y < *z) {
+    if (((*x < *y) && (*x > *z) && (*y > *z)) || ((*x < *y) && (*x < *z) && (*y < *z))) {
+      var = *x;
       *x = *y;
-      *y = val;
+      *y = var;
     } else {
-
-    }
-  } else {
-    if (*x < *y) {
-      val = *x;
+      var = *x;
       *x = *y;
       *y = *z;
-      *z = val;
+      *z = var;
     }
   }
-
 }
