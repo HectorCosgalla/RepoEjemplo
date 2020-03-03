@@ -13,9 +13,10 @@ int main(){
   band = false;
 
   /********** ENTRADAS **********/
-  printf("\n" );
-  printf("\n" );
-  printf("\n" );
+  printf("1) Define si 10 numeros son pares o impares!\n" );
+  printf("2) Los primeros tres numeros perfectos, los conoces?\n" );
+  printf("3) El inverso de un numero, por ejemplo: 1234 -> 4321\n" );
+  printf("Su selecci%cn:\n", 162);
 
   /********** PROCESOS **********/
   do {
@@ -93,10 +94,11 @@ void Reverso() {
   Alm = 0;
   printf("Ingrese un numero:\n");
   scanf("%d", &Num);
-  do {
+  while (Num != 0) {
     Alm = Num % 10;
     Num2 = (Num2 + Alm)*10;
     Num = Num / 10;
-  } while(Num > 0);
+  }
+  Num2 = Num2 / 10;
   printf("El reverso del numero es: %d \n", Num2);
 }
