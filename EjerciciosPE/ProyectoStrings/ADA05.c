@@ -27,11 +27,14 @@ int main(){
   switch (opc) {
     case 1:
       sol = compararCadenas(cad1, cad2);
+      break;
     case 2:
       sol = encontrarCadena(cad1, cad2);
+      break;
   }
 
   /********** SALIDAS **********/
+
   if (sol == 1) {
     printf("\n1\n");
   }else {
@@ -56,7 +59,7 @@ void entradas(char cad1[], char cad2[], char *car, int opc){
 }
 
 int compararCadenas(char cad1[], char cad2[]){
-  int i = 0, igual, dist;
+  int i = 0, igual = 0, dist = 0, a = 0;
   while (cad1[i] != '\0' || cad2[i] != '\0') {
     if (cad1[i] == cad2[i]) {
       igual++;
@@ -64,10 +67,13 @@ int compararCadenas(char cad1[], char cad2[]){
       dist++;
     }
     i++;
+    printf("%d %d\n", i, igual);
   }
   if (igual == i) {
+    printf("aa\n" );
     return 1;
   } else {
+    printf("aaaa\n");
     return 0;
   }
 }
