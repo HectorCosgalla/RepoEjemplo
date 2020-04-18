@@ -59,7 +59,7 @@ void entradas(char cad1[], char cad2[], char *car, int opc){
 }
 
 int compararCadenas(char cad1[], char cad2[]){
-  int i = 0, igual = 0, dist = 0, a = 0;
+  int i = 0, igual = 0, dist = 0;
   while (cad1[i] != '\0' || cad2[i] != '\0') {
     if (cad1[i] == cad2[i]) {
       igual++;
@@ -67,35 +67,35 @@ int compararCadenas(char cad1[], char cad2[]){
       dist++;
     }
     i++;
-    printf("%d %d\n", i, igual);
   }
   if (igual == i) {
-    printf("aa\n" );
     return 1;
   } else {
-    printf("aaaa\n");
     return 0;
   }
 }
 
 
 int encontrarCadena(char cad1[], char cad2[]){
-  int i = 0, j = 0;
-  while (cad2[i] != '\0') {
-    if (cad2[i] == cad1[i]) {
-      while (cad1[j] != '\0') {
-        if (cad1[j] == cad2[j]) {
-          j++;
-        } else {
-          j = 0;
-          break;
-        }
-      }
-      i = j;
-    }
+  int i = 0, j = 0, n = 0, iguales = 0;
+  while (cad1[i] != '\0' ) {
+    printf("%c ", cad1[i]);
+    n++;
     i++;
+    printf("%d\n", n);
   }
-  if (j > 0) {
+  printf("%d\n", n);
+  i = 0;
+  do {
+    while (cad1[i] == cad2[j] && cad1[i] != '\0') {
+      i++;
+      j++;
+      iguales++;
+    }
+    j++;
+  }while (cad2[j] != '\0');
+
+  if (n == iguales) {
     return 1;
   } else {
     return 0;
