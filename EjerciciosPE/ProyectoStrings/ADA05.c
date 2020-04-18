@@ -12,6 +12,7 @@ int esDigito(char car);
 int esMayuscula(char car);
 int esVocal(char car);
 int esConsanante(char car);
+void convertirMayusculas(char cad1[]);
 
 int main(){
   /********** DECLARACION DE VARIABLES **********/
@@ -28,7 +29,9 @@ int main(){
     printf("5) Obtener la posicion de un caracter en una cadena\n");
     printf("6) Verificar si un caracter es un digito\n");
     printf("7) Verificar si un caracter es una letra mayuscula\n");
-    printf("8) Verificar si un caracter es una letra consonante\n");
+    printf("8) Verificar si un caracter es una vocal\n");
+    printf("9) Verificar si un caracter es una letra consonante\n");
+    printf("10) CONVIERTE TODA UNA CADENA EN MAYUSCULAS\n\n");
     scanf("%d", &opc);
     if (opc > 10 && opc < 1) {
       printf("ERROR: Opcion invalida\n");
@@ -37,6 +40,7 @@ int main(){
       break;
     }
   } while(1);
+  
   /********** PROCESOS **********/
   switch (opc) {
     case 1:
@@ -66,6 +70,8 @@ int main(){
     case 9:
       sol = esConsanante(car);
       break;
+    case 10:
+      convertirMayusculas(cad1);
   }
 
   /********** SALIDAS **********/
@@ -73,6 +79,7 @@ int main(){
   if (opc != 4 && opc != 10) {
     printf("\n%d\n", sol);
   }
+
   if (opc == 4) {
     i = 0;
     printf("\n");
@@ -83,6 +90,15 @@ int main(){
     printf("\n");
   }
 
+  if (opc == 10) {
+    i = 0;
+    printf("\n");
+    while (cad1[i] != '\0') {
+      printf("%c", cad1[i]);
+      i++;
+    }
+    printf("\n");
+  }
   fflush(stdin);
   return 0;
 }
@@ -223,5 +239,15 @@ int esConsanante(char car){
     return 1;
   } else {
     return 0;
+  }
+}
+
+void convertirMayusculas(char cad1[]){
+  int i = 0;
+  while (cad1[i] != '\0') {
+    if (cad1[i] >= 97 && cad1[i] <= 122) {
+      cad1[i] = cad1[i] - 32;
+    }
+    i++;
   }
 }
