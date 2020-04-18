@@ -1,5 +1,6 @@
 #include "stdio.h"
 #define MAX 50
+/***** Creado por Hector Cosgalla *****/
 
 /********** PROTOTIPO DE FUNCIONES **********/
 void entradas(char cad1[], char cad2[], char *, int);
@@ -40,7 +41,7 @@ int main(){
       break;
     }
   } while(1);
-  
+
   /********** PROCESOS **********/
   switch (opc) {
     case 1:
