@@ -5,12 +5,12 @@ NOTA IMPORTANTE: tuve que cambiar los  tipos de las estructuras de double a floa
 lo hice por que por algun motivo que desconozco no me leia las entradas que le daba
 */
 struct punto {
-  float x;
-  float y;
+  double x;
+  double y;
 };
 struct recta {
   struct punto p;
-  float m;
+  double m;
 };
 /********** PROTOTIPO DE FUNCIONES **********/
 void asignacion(struct recta rectas[]);
@@ -27,7 +27,6 @@ int main(){
   /********** PROCESOS **********/
   for (int i = 0; i < RECS; i++) {
     d[i] = rectas[i].p.y - (rectas[i].m * rectas[i].p.x);
-    printf("(%f,%f) & m = %f & d = %f\n", rectas[i].p.x, rectas[i].p.y, rectas[i].m, d[i]);
   }
 
   /********** SALIDAS **********/
@@ -40,21 +39,25 @@ int main(){
 void asignacion(struct recta rectas[]) {
   for (int i = 0; i < RECS; i++) {
     printf("Ingrese el valor de x%d: ", i+1);
-    scanf("%f", &rectas[i].p.x);
+    scanf("%lf", &rectas[i].p.x);
     printf("Ingrese el valor de y%d: ", i+1);
-    scanf("%f", &rectas[i].p.y);
+    scanf("%lf", &rectas[i].p.y);
     printf("Ingrese el valor de m%d: ", i+1);
-    scanf("%f", &rectas[i].m);
+    scanf("%lf", &rectas[i].m);
   }
 }
 
 void puntosInterseccion(struct recta rectas[], float d[]) {
-  float x = 0, y = 0;
+  double x = 0, y = 0;
   for (int i = 0; i < RECS; i++) {
     for (int j = i+1; j < RECS; j++) {
-      x = (d[j] - d[i]) / (rectas[i].m - rectas[j].m);
-      y = rectas[i].m*x + d[i];
-      printf("punto de interseccion de la recta %i y %i es: (%f,%f) \n", i, j, x, y);
+      if (rectas[i].m == rectas[j].m) {
+        printf("La recta %d y %d son paralelas.\n", i+1, j+1);
+      } else {
+        x = (d[j] - d[i]) / (rectas[i].m - rectas[j].m);
+        y = rectas[i].m*x + d[i];
+        printf("punto de interseccion de la recta %i y %i es: (%.2lf,%.2lf) \n", i+1, j+1, x, y);
+      }
     }
   }
 }
