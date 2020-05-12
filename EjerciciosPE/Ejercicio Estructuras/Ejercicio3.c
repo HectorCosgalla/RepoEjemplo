@@ -1,8 +1,7 @@
 #include "stdio.h"
 #define RECS 5
 /*
-NOTA IMPORTANTE: tuve que cambiar los  tipos de las estructuras de double a float,
-lo hice por que por algun motivo que desconozco no me leia las entradas que le daba
+REALIZADO POR: Hector Cosgalla
 */
 struct punto {
   double x;

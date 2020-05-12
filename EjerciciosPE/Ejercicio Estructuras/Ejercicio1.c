@@ -1,5 +1,7 @@
 #include "stdio.h"
 
+//REALIZADO POR: Hector Cosgalla
+
 struct comp {
   float pR;
   float pI;

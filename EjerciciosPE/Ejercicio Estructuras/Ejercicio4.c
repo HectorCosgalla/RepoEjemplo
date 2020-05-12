@@ -3,6 +3,8 @@
 #include "conio.h"
 #define MAX 10
 
+//REALIZADO POR: Hector Cosgalla
+
 struct temperatura {
   float min;
   float max;

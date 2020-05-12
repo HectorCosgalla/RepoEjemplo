@@ -1,6 +1,8 @@
 #include "stdio.h"
 #include <windows.h>
 
+//REALIZADO POR: Hector Cosgalla
+
 struct test {
   int e[20];
   double d[15];
