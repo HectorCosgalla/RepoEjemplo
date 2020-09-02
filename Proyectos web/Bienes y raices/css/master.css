@@ -64,6 +64,10 @@ img{
   text-align: center;
 }
 
+.boton:hover{
+  cursor: pointer;
+}
+
 .boton-amarillo{
   background-color: #E08709;
 }
@@ -322,4 +326,49 @@ img{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/** Contacto **/
+.formato p{
+  font-size: 1.4rem;
+}
+legend{
+  font-size: 2.4rem;
+  color: #333333;
+}
+label{
+  font-weight: 700;
+  text-transform: capitalize;
+  display: block;
+}
+
+input:not([type="submit"]),
+textarea, select{
+  padding: 1rem;
+  display: block;
+  width: calc(100% - 2rem);
+  background-color: #e1e1e1;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: .5rem;
+}
+
+.forma-contacto{
+  max-width: 30rem;
+  display: flex;
+  align-items: center;
+}
+
+.forma-contacto label{
+  margin-right: 2rem;
+}
+
+.forma-contacto input{
+  margin: 0 5rem 0 0;
+  width: auto;
+}
+
+select{
+  -webkit-appearance:none;
+  appearance: none;
 }
