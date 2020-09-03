@@ -31,13 +31,3 @@ body{
 .parrafo {
   margin: auto;
 }
-
-.parrafo p{
-  display: inline-flex;
-  margin: 0;
-}
-
-.bold{
-  font-weight: bold;
-
-}
