@@ -1,0 +1,33 @@
+body{
+  font-family: 'Barlow', sans-serif;
+  text-shadow: 1px 1px 4px white, 0 0 1em red, 0 0 .5em yellow;
+}
+
+.degradado{
+  background-image: linear-gradient(
+    to right,
+    #000000 ,
+    #eda024
+    );
+}
+
+.titulo{
+  margin: 0 auto;
+  width: 0;
+}
+
+.contenedor {
+  display: inline-flex;
+  width: 100%
+
+}
+
+.imagen{
+  padding: 1rem;
+  display: flex;
+  max-width: 50%;
+}
+
+.parrafo {
+  margin: auto;
+}
