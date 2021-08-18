@@ -1,6 +1,6 @@
 ## Requisitos:
 * git 2.30.2 
-* python 3.8.11 (IMPORTANTE: Incluir en la instalacion el comando "pip")
+* python 3.8.11 (**IMPORTANTE**: Incluir en la instalacion el comando "pip")
 
 > probado en fedora 33
 
