@@ -33,6 +33,7 @@ DB_COLLECTION = videos
 FLASK_ENV = development
 FLASK_RUN_PORT = 5000
 ```
+**Paso opcional (En caso de querer ver como se procesa el video):** Abrir el archivo "yolov4" que se encuentra en la direccion "~/pavi/pavi/services" y en la ultima linea borrar la parte que dice `, no_show=True`
 4.2.- Ejecutamos la app con el comando `python3.8 run.py`
 
 ### Paso 5: Procesamos el video.
