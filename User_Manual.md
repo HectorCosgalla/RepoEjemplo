@@ -33,3 +33,8 @@ FLASK_RUN_PORT = 5000
 4.2.- Ejecutamos la app con el comando `python3.8 run.py`
 
 > NOTA: Por el momento si ejecutamos la aplicacion puede tirar el error 404, todavia estoy trabajando en la solucion del mismo
+
+
+### Posibles errores:
+1.- Error "gcc: error fatal: cannot execute ‘cc1plus’: execvp: No existe el fichero o el directorio"
+Solucion: Instalar el paquete gcc-g++ con el comando `sudo dnf install gcc-g++`
